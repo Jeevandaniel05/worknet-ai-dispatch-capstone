@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkNet Worker Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="screen worker-dashboard-screen">
+    <header class="worker-dashboard-hero">
+      <div class="worker-dashboard-copy">
+        <p class="label worker-dashboard-label">Worker Dashboard</p>
+        <h1>Manage Your Bookings</h1>
+        <p>Review incoming jobs, track schedules, and take action on each booking from one clean workspace.</p>
+      </div>
+      <div class="worker-dashboard-summary">
+        <span>Today</span>
+        <strong id="dashboard-booking-count">0 bookings</strong>
+      </div>
+    </header>
+
+    <section class="details-card worker-dashboard-panel">
+      <div class="section-header">
+        <div>
+          <p class="label">Bookings Table</p>
+          <h2>Assigned Jobs</h2>
+        </div>
+      </div>
+
+      <div id="dashboard-loading" class="dashboard-loading" aria-live="polite">
+        <div class="dashboard-skeleton"></div>
+        <div class="dashboard-skeleton"></div>
+        <div class="dashboard-skeleton"></div>
+      </div>
+
+      <div class="dashboard-table-wrap">
+        <table class="dashboard-table" id="dashboard-table" hidden>
+          <thead>
+            <tr>
+              <th>Worker</th>
+              <th>Category</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="dashboard-bookings-body"></tbody>
+        </table>
+      </div>
+
+      <div id="dashboard-empty" class="bookings-empty" hidden>No bookings available right now.</div>
+    </section>
+
+    <nav class="bottom-nav" aria-label="Primary">
+      <a href="index.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="nav-svg">
+            <path d="M12 4 4 10.2V20h5.5v-5h5V20H20v-9.8L12 4Z"></path>
+          </svg>
+        </span>
+        <span>Home</span>
+      </a>
+      <a href="index.html#nearby-workers" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="nav-svg">
+            <path d="M12 2.5a7 7 0 0 1 7 7c0 5.1-7 12-7 12s-7-6.9-7-12a7 7 0 0 1 7-7Zm0 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"></path>
+          </svg>
+        </span>
+        <span>Discover</span>
+      </a>
+      <a href="worker-details.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="nav-svg">
+            <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Zm0 2v.4l8 5.3 8-5.3V8H4Zm16 8V10.8l-7.4 4.9a1 1 0 0 1-1.1 0L4 10.8V16h16Z"></path>
+          </svg>
+        </span>
+        <span>Chat</span>
+      </a>
+      <a href="worker-dashboard.html" class="nav-item active">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="nav-svg">
+            <path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm2 3v2h10V7H7Zm0 4v2h10v-2H7Zm0 4v2h6v-2H7Z"></path>
+          </svg>
+        </span>
+        <span>Bookings</span>
+      </a>
+      <a href="login.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="nav-svg">
+            <path d="M12 12a4.5 4.5 0 1 0-4.5-4.5A4.5 4.5 0 0 0 12 12Zm0 2c4 0 7.5 2 8.5 5H3.5c1-3 4.5-5 8.5-5Z"></path>
+          </svg>
+        </span>
+        <span>Account</span>
+      </a>
+    </nav>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
