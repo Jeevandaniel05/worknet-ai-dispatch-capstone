@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worker Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="screen details-screen">
+    <header class="details-header">
+      <a class="back-link" href="index.html">← Back</a>
+      <p class="label">Worker Details</p>
+    </header>
+
+    <main class="details-layout">
+      <section class="details-hero">
+        <div class="details-badge-strip">
+          <span class="details-badge-chip">Verified</span>
+          <span class="details-badge-chip">Fast Response</span>
+        </div>
+        <div class="details-avatar" aria-hidden="true">👨‍🔧</div>
+        <div class="details-copy">
+          <p class="label">Available Now</p>
+          <h1>Arjun Kumar</h1>
+          <p>Appliance technician with fast service, nearby support, and same-day booking.</p>
+        </div>
+        <div class="details-badge">★ 4.8</div>
+      </section>
+
+      <section class="details-card">
+        <h2>Current Location</h2>
+        <div class="details-map">
+          <div class="details-map-grid" aria-hidden="true"></div>
+          <div class="details-map-user" aria-hidden="true">📍</div>
+          <div class="details-map-label user-label">You</div>
+          <div class="worker-marker">
+            <div class="details-map-worker" aria-hidden="true">👨‍🔧</div>
+            <div class="worker-meta-card">
+            <strong class="worker-meta-fee">$28/hr</strong>
+            <span class="worker-meta-eta">18 min away</span>
+            <span class="worker-meta-name">Arjun</span>
+            </div>
+          </div>
+        </div>
+        <p class="details-note">Arjun is around 1.2 miles away and can arrive in about 18 minutes.</p>
+      </section>
+
+      <section class="details-card">
+        <h2>Booking Summary</h2>
+        <div class="details-stats">
+          <div class="details-stat">
+            <span class="label">Rate</span>
+            <strong>$28/hr</strong>
+          </div>
+          <div class="details-stat">
+            <span class="label">Experience</span>
+            <strong>6 Years</strong>
+          </div>
+          <div class="details-stat">
+            <span class="label">Category</span>
+            <strong>Repair</strong>
+          </div>
+          <div class="details-stat booking-stat" id="booking-date-stat" hidden>
+            <span class="label">Selected Date</span>
+            <strong id="booking-date-display">Not selected</strong>
+          </div>
+          <div class="details-stat booking-stat" id="booking-time-stat" hidden>
+            <span class="label">Selected Time</span>
+            <strong id="booking-time-display">Not selected</strong>
+          </div>
+          <div class="details-stat booking-stat" id="booking-team-stat" hidden>
+            <span class="label">Team Size</span>
+            <strong id="booking-team-display">1 worker</strong>
+          </div>
+        </div>
+        <form class="booking-form" id="booking-form">
+          <div class="booking-fields">
+            <label class="booking-field">
+              <span>Date</span>
+              <input id="booking-date" type="date" required>
+            </label>
+            <label class="booking-field">
+              <span>Time</span>
+              <input id="booking-time" type="time" required>
+            </label>
+            <label class="booking-field">
+              <span>Team size</span>
+              <select id="booking-team-size" required>
+                <option value="1">1 worker</option>
+                <option value="2">2 workers</option>
+                <option value="3">3 workers</option>
+              </select>
+            </label>
+          </div>
+          <p class="booking-helper">Choose a larger crew if you need faster setup, heavy lifting, or multi-room support.</p>
+          <button class="cta-button details-button" type="submit">Confirm Booking</button>
+        </form>
+        <div class="booking-confirmation" id="booking-confirmation" hidden>
+          <p class="label">Booking Confirmed</p>
+          <h3>Your team visit is scheduled.</h3>
+          <p id="booking-confirmation-text">Arjun Kumar will arrive at your selected time.</p>
+          <div class="booking-confirmation-meta">
+            <div class="booking-confirmation-item">
+              <span>Date</span>
+              <strong id="booking-confirmation-date">Not selected</strong>
+            </div>
+            <div class="booking-confirmation-item">
+              <span>Time</span>
+              <strong id="booking-confirmation-time">Not selected</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="details-card">
+        <div class="section-header">
+          <div>
+            <p class="label">Live Data</p>
+            <h2>Recent Bookings</h2>
+          </div>
+        </div>
+        <div id="bookings" class="bookings-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
