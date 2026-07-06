@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="emergency-page">
+  <div class="screen emergency-screen">
+    <header class="details-header emergency-header">
+      <a class="back-link" href="index.html">← Back</a>
+      <p class="label">Emergency Booking</p>
+    </header>
+
+    <main class="emergency-layout">
+      <section class="emergency-hero">
+        <div class="emergency-badge">
+          <span class="urgent-signal" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="urgent-signal-svg">
+              <path d="M12 2.5 2.8 19.5h18.4L12 2.5Zm0 5.2 4.1 7.6H7.9L12 7.7Zm-.9 2.6v3.1h1.8v-3.1h-1.8Zm0 4.4v1.8h1.8v-1.8h-1.8Z"></path>
+            </svg>
+          </span>
+          <span>Emergency Priority</span>
+        </div>
+        <h1>Fastest Repair Dispatch</h1>
+        <p>We are matching your request with the nearest available repair specialist for immediate support.</p>
+        <div class="emergency-highlights">
+          <div class="emergency-highlight">
+            <strong>12 min</strong>
+            <span>Estimated arrival</span>
+          </div>
+          <div class="emergency-highlight">
+            <strong>3 Pros</strong>
+            <span>Ready nearby</span>
+          </div>
+          <div class="emergency-highlight">
+            <strong>24/7</strong>
+            <span>Priority hotline</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="emergency-card">
+        <h2>Emergency Request</h2>
+        <div class="emergency-list">
+          <div class="emergency-item">
+            <span class="label">Issue Type</span>
+            <strong>Urgent appliance repair</strong>
+          </div>
+          <div class="emergency-item">
+            <span class="label">Location</span>
+            <strong>Bengaluru, India</strong>
+          </div>
+          <div class="emergency-item">
+            <span class="label">Response Window</span>
+            <strong>Within 12 minutes</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="emergency-card">
+        <h2>Request Details</h2>
+        <form class="emergency-form" id="emergency-form">
+          <label class="emergency-field">
+            <span>Issue Type</span>
+            <select id="emergency-issue" required>
+              <option value="">Choose an urgent issue</option>
+              <option>Appliance failure</option>
+              <option>Electrical outage</option>
+              <option>Water leak</option>
+              <option>Blocked drainage</option>
+            </select>
+          </label>
+
+          <label class="emergency-field">
+            <span>Address</span>
+            <input id="emergency-address" type="text" placeholder="Enter full address" required>
+          </label>
+
+          <label class="emergency-field">
+            <span>Phone Number</span>
+            <input id="emergency-phone" type="tel" placeholder="+91 98765 43210" required>
+          </label>
+
+          <label class="emergency-field emergency-field-full">
+            <span>Emergency Note</span>
+            <textarea id="emergency-note" rows="4" placeholder="Briefly describe what needs immediate repair"></textarea>
+          </label>
+
+          <button class="emergency-submit" type="submit">Send Emergency Request</button>
+        </form>
+      </section>
+
+      <section class="emergency-card">
+        <h2>Nearest Specialist</h2>
+        <div class="emergency-worker">
+          <div class="emergency-worker-avatar" aria-hidden="true">👨‍🔧</div>
+          <div class="emergency-worker-copy">
+            <h3>Arjun Kumar</h3>
+            <p>Emergency appliance technician with same-day repair coverage.</p>
+            <div class="emergency-worker-meta">
+              <span>★ 4.8</span>
+              <span>1.2 mi away</span>
+              <span>$28/hr</span>
+            </div>
+          </div>
+        </div>
+        <button class="emergency-confirm" type="button" data-go-page="worker-details.html">Confirm Emergency Dispatch</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
