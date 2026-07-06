@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkNet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="screen">
+    <header class="top-header">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">
+          <span class="brand-mark-core"></span>
+          <span class="brand-mark-ring ring-a"></span>
+          <span class="brand-mark-ring ring-b"></span>
+        </div>
+        <div class="brand-copy">
+          <p class="label">WorkNet</p>
+          <h1>Service Marketplace</h1>
+        </div>
+      </div>
+      <div class="location-block">
+        <p class="label">Current location</p>
+        <h1>Bengaluru, India</h1>
+      </div>
+      <a id="header-login-action" class="header-login-link" href="https://worknet-ommn.onrender.com/auth/google">
+        <button id="login-btn" class="auth-primary header-login-button" type="button">
+          <span class="header-login-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="header-login-svg">
+              <path d="M21.8 12.2c0-.7-.1-1.3-.2-1.9H12v3.6h5.5a4.7 4.7 0 0 1-2 3.1v2.6h3.2c1.9-1.8 3.1-4.4 3.1-7.4Z" fill="#4285F4"></path>
+              <path d="M12 22c2.7 0 5-0.9 6.7-2.4l-3.2-2.6c-.9.6-2 .9-3.5.9-2.7 0-4.9-1.8-5.7-4.2H3v2.7A10 10 0 0 0 12 22Z" fill="#34A853"></path>
+              <path d="M6.3 13.7A6 6 0 0 1 6 12c0-.6.1-1.2.3-1.7V7.6H3A10 10 0 0 0 2 12c0 1.6.4 3.2 1 4.4l3.3-2.7Z" fill="#FBBC04"></path>
+              <path d="M12 6.1c1.5 0 2.8.5 3.8 1.4l2.9-2.9A10 10 0 0 0 3 7.6l3.3 2.7C7.1 7.9 9.3 6.1 12 6.1Z" fill="#EA4335"></path>
+            </svg>
+          </span>
+          <span>Login with Google</span>
+        </button>
+      </a>
+      <div id="user-info"></div>
+      <button class="icon-button" aria-label="Notifications">
+        <span class="icon-bell"></span>
+      </button>
+    </header>
+
+    <main class="content">
+      <section class="search-row">
+        <label class="search-bar" for="service-search">
+          <span class="search-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="search-svg">
+              <path d="M10.5 4.5a6 6 0 1 0 0 12 6 6 0 0 0 0-12Zm0-2a8 8 0 1 1 4.9 14.3l4 4-1.4 1.4-4-4A8 8 0 0 1 10.5 2.5Z"></path>
+            </svg>
+          </span>
+          <input id="service-search" type="text" placeholder="Search service or provider">
+        </label>
+        <button class="filter-button" aria-label="Filter results">
+          <span class="filter-lines"></span>
+          <span class="filter-glow"></span>
+        </button>
+      </section>
+
+      <section class="hero-banner">
+        <div class="hero-orb orb-one" aria-hidden="true"></div>
+        <div class="hero-orb orb-two" aria-hidden="true"></div>
+        <div class="hero-grid-lines" aria-hidden="true"></div>
+        <div class="hero-badge">
+          <span class="hero-badge-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="badge-svg">
+              <path d="M12 2.5 14.8 8l5.9.9-4.2 4.1 1 5.8L12 16l-5.5 2.8 1-5.8L3.3 8.9 9.2 8 12 2.5Z"></path>
+            </svg>
+          </span>
+          <span>Trusted Home Services</span>
+        </div>
+        <div class="hero-copy">
+          <p class="label banner-label">Top Rated Pros</p>
+          <h2>Find Workers Nearby</h2>
+          <p>Book trusted experts for home fixes, maintenance, and deep cleaning in a few taps.</p>
+          <div class="hero-stats" aria-label="Platform highlights">
+            <div class="hero-stat">
+              <strong>2.4k+</strong>
+              <span>Verified pros</span>
+            </div>
+            <div class="hero-stat">
+              <strong>18 min</strong>
+              <span>Average arrival</span>
+            </div>
+            <div class="hero-stat">
+              <strong>4.9/5</strong>
+              <span>Customer trust</span>
+            </div>
+          </div>
+          <button class="cta-button" type="button" data-go-page="worker-details.html">Book Now</button>
+        </div>
+        <div class="hero-worker" aria-hidden="true">
+          <div class="hero-card hero-card-top">
+            <span class="hero-card-label">Live Match</span>
+            <strong>3 workers close by</strong>
+          </div>
+          <div class="worker-figure">
+            <div class="worker-head"></div>
+            <div class="worker-body"></div>
+            <div class="worker-phone"></div>
+          </div>
+          <div class="hero-card hero-card-bottom">
+            <span class="hero-card-dot"></span>
+            <span>Booking secured</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="urgent-strip" aria-label="Urgent repair booking">
+        <div class="urgent-copy">
+          <div class="urgent-head">
+            <span class="urgent-signal" aria-hidden="true">
+              <svg viewBox="0 0 24 24" class="urgent-signal-svg">
+                <path d="M12 2.5 2.8 19.5h18.4L12 2.5Zm0 5.2 4.1 7.6H7.9L12 7.7Zm-.9 2.6v3.1h1.8v-3.1h-1.8Zm0 4.4v1.8h1.8v-1.8h-1.8Z"></path>
+              </svg>
+            </span>
+            <span class="urgent-status">Emergency Dispatch</span>
+          </div>
+          <p class="label urgent-label">Urgent Help</p>
+          <h3>Immediate Work for Fast Repairs</h3>
+          <p>Skip the regular queue and connect with the fastest available worker for emergency plumbing, electrical, and appliance issues.</p>
+        </div>
+        <div class="urgent-meta">
+          <div class="urgent-pill">
+            <strong>12 min</strong>
+            <span>Fastest arrival</span>
+          </div>
+          <div class="urgent-pill">
+            <strong>24/7</strong>
+            <span>Priority support</span>
+          </div>
+          <div class="urgent-pill urgent-pill-highlight">
+            <strong>Now</strong>
+            <span>Live priority matching</span>
+          </div>
+        </div>
+        <button class="urgent-action" type="button" data-go-page="emergency-booking.html">Book Urgent Repair</button>
+      </section>
+
+      <section class="agent-panel" aria-label="AI dispatch agent">
+        <div class="agent-panel-copy">
+          <p class="label">AI Dispatch Agent</p>
+          <h3>Describe the problem and get a safe worker plan.</h3>
+          <p>WorkNet's triage, matching, and safety guard agents classify the issue, rank nearby workers, and prepare next steps for dispatch.</p>
+        </div>
+        <form id="agent-plan-form" class="agent-plan-form">
+          <label class="agent-field">
+            <span>Issue</span>
+            <textarea id="agent-issue" rows="3" maxlength="400" required>Water is leaking fast from the kitchen pipe and spreading near the switch board.</textarea>
+          </label>
+          <label class="agent-field">
+            <span>Address</span>
+            <input id="agent-address" type="text" maxlength="180" required value="Indiranagar, Bengaluru">
+          </label>
+          <button class="agent-submit" type="submit">Run Agent Plan</button>
+        </form>
+        <div id="agent-plan-output" class="agent-plan-output" aria-live="polite">
+          <p class="agent-empty">Run the agent to see triage, recommended team, safety notes, and next actions.</p>
+        </div>
+      </section>
+
+      <section class="section-header">
+        <div>
+          <p class="label">Categories</p>
+          <h3>Choose a Service Category</h3>
+        </div>
+      </section>
+
+      <section class="category-feature" aria-label="Selected category overview">
+        <div class="category-feature-copy">
+          <p class="label">Selected Category</p>
+          <h3 id="category-feature-title">Repair Services</h3>
+          <p id="category-feature-text">Fast fixes for appliances, TVs, and AC issues with trusted repair professionals.</p>
+        </div>
+        <div class="category-feature-stats">
+          <div class="category-feature-pill">
+            <strong id="category-service-count">3</strong>
+            <span>Services available</span>
+          </div>
+          <div class="category-feature-pill">
+            <strong>From $20/hr</strong>
+            <span>Flexible booking</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories" aria-label="Service categories">
+        <button class="category-chip active" data-category="repair">
+          <span class="chip-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="chip-svg">
+              <path d="M14.2 4.4a4.4 4.4 0 0 0 5.4 5.4l-8.4 8.4a1.7 1.7 0 1 1-2.4-2.4l8.4-8.4a4.4 4.4 0 0 1-3-3Z"></path>
+            </svg>
+          </span>
+          <span class="chip-label">Repair</span>
+          <span class="chip-note">3 services</span>
+        </button>
+        <button class="category-chip" data-category="electrical">
+          <span class="chip-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="chip-svg">
+              <path d="M13.5 2 6 13h4l-1.2 9L18 10h-4l-.5-8Z"></path>
+            </svg>
+          </span>
+          <span class="chip-label">Electrical</span>
+          <span class="chip-note">4 services</span>
+        </button>
+        <button class="category-chip" data-category="plumbing">
+          <span class="chip-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="chip-svg">
+              <path d="M7 4h8v3h-2v3.2a4.8 4.8 0 0 1 4 4.8v1h-2v-1a2.8 2.8 0 0 0-5.6 0V20H7v-5a4.8 4.8 0 0 1 4-4.8V7H7V4Z"></path>
+            </svg>
+          </span>
+          <span class="chip-label">Plumbing</span>
+          <span class="chip-note">3 services</span>
+        </button>
+        <button class="category-chip" data-category="cleaning">
+          <span class="chip-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="chip-svg">
+              <path d="m10 3 1.7 4.4L16 9l-4.3 1.6L10 15l-1.7-4.4L4 9l4.3-1.6L10 3Zm7 10 1 2.4L20 16l-2 1-1 2.5L16 17l-2-.9 2-1.7 1-1.4Z"></path>
+            </svg>
+          </span>
+          <span class="chip-label">Cleaning</span>
+          <span class="chip-note">2 services</span>
+        </button>
+      </section>
+
+      <section class="section-header section-spaced">
+        <div>
+          <p class="label">Services</p>
+          <h3 id="services-heading">Repair Services</h3>
+        </div>
+        <span class="section-link service-count-text" id="service-count-text">3 services</span>
+      </section>
+
+      <section class="service-grid" id="service-grid" aria-label="Services by category">
+        <article class="service-card reveal-card" data-category="repair">
+          <div class="service-image service-image-appliance service-image-emoji-wrap">
+            <span class="service-emoji" aria-hidden="true">🧺</span>
+          </div>
+          <div class="service-body">
+            <div class="service-rating">Repair</div>
+            <h4>Appliance Repair</h4>
+            <p>Kitchen and home appliance troubleshooting</p>
+            <div class="service-footer">
+              <strong>$32/hr</strong>
+              <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-card" data-category="repair">
+          <div class="service-image service-image-tv service-image-emoji-wrap">
+            <span class="service-emoji" aria-hidden="true">📺</span>
+          </div>
+          <div class="service-body">
+            <div class="service-rating">Repair</div>
+            <h4>TV Repair</h4>
+            <p>Display, sound, and power issue fixes</p>
+            <div class="service-footer">
+              <strong>$26/hr</strong>
+              <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-card" data-category="repair">
+          <div class="service-image service-image-ac service-image-emoji-wrap">
+            <span class="service-emoji" aria-hidden="true">❄️</span>
+          </div>
+          <div class="service-body">
+            <div class="service-rating">Repair</div>
+            <h4>AC Repair</h4>
+            <p>Cooling, airflow, and compressor support</p>
+            <div class="service-footer">
+              <strong>$38/hr</strong>
+              <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-card" data-category="electrical">
+          <div class="service-image service-image-wiring worker-photo worker-photo-wiring"></div>
+          <div class="service-body">
+            <div class="service-rating">Electrical</div>
+            <h4>Wiring</h4>
+            <p>Safe rewiring and electrical fault support</p>
+            <div class="service-footer">
+              <strong>$40/hr</strong>
+              <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-card" data-category="electrical">
+          <div class="service-image service-image-fan-repair worker-photo worker-photo-fan-repair"></div>
+          <div class="service-body">
+            <div class="service-rating">Electrical</div>
+            <h4>Fan Repair</h4>
+            <p>Motor, speed regulator, and noise fixing</p>
+            <div class="service-footer">
+              <strong>$24/hr</strong>
+              <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-card" data-category="electrical">
+          <div class="service-image service-image-fan-install worker-photo worker-photo-fan-install"></div>
+          <div class="service-body">
+            <div class="service-rating">Electrical</div>
+            <h4>Fan Installation</h4>
+            <p>Ceiling and wall fan setup by pros</p>
+            <div class="service-footer">
+              <strong>$22/hr</strong>
+              <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-card" data-category="electrical">
+          <div class="service-image service-image-switch worker-photo worker-photo-switch"></div>
+          <div class="service-body">
+            <div class="service-rating">Electrical</div>
+            <h4>Switch Replacement</h4>
+            <p>Fast replacement for damaged switches</p>
+            <div class="service-footer">
+              <strong>$20/hr</strong>
+              <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-card" data-category="plumbing">
+          <div class="service-image service-image-pipe worker-photo worker-photo-pipe"></div>
+          <div class="service-body">
+            <div class="service-rating">Plumbing</div>
+            <h4>Pipe Fixing</h4>
+            <p>Leak sealing and pipe replacement help</p>
+            <div class="service-footer">
+              <strong>$36/hr</strong>
+              <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-card" data-category="plumbing">
+          <div class="service-image service-image-tap worker-photo worker-photo-tap"></div>
+          <div class="service-body">
+            <div class="service-rating">Plumbing</div>
+            <h4>Tap Repair</h4>
+            <p>Quick fixes for loose, leaking, or noisy taps</p>
+            <div class="service-footer">
+              <strong>$21/hr</strong>
+              <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-card" data-category="plumbing">
+          <div class="service-image service-image-drain worker-photo worker-photo-drain"></div>
+          <div class="service-body">
+            <div class="service-rating">Plumbing</div>
+            <h4>Drain Cleaning</h4>
+            <p>Clog removal and smooth water flow restoration</p>
+            <div class="service-footer">
+              <strong>$29/hr</strong>
+              <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-card" data-category="cleaning">
+          <div class="service-image service-image-home-clean worker-photo worker-photo-home-clean"></div>
+          <div class="service-body">
+            <div class="service-rating">Cleaning</div>
+            <h4>Home Cleaning</h4>
+            <p>Whole-home cleanup with flexible timing</p>
+            <div class="service-footer">
+              <strong>$28/hr</strong>
+              <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-card" data-category="cleaning">
+          <div class="service-image service-image-bathroom worker-photo worker-photo-bathroom"></div>
+          <div class="service-body">
+            <div class="service-rating">Cleaning</div>
+            <h4>Bathroom Cleaning</h4>
+            <p>Deep scrubbing for tiles, sinks, and fittings</p>
+            <div class="service-footer">
+              <strong>$25/hr</strong>
+              <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="details-card bookings-panel">
+        <div class="section-header section-spaced">
+          <div>
+            <p class="label">Bookings</p>
+            <h2>Recent bookings</h2>
+          </div>
+        </div>
+
+        <div id="bookings-loading" class="bookings-loading" aria-live="polite">
+          <div class="booking-skeleton"></div>
+          <div class="booking-skeleton"></div>
+          <div class="booking-skeleton"></div>
+        </div>
+
+        <div id="bookings" class="bookings-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Primary">
+      <a href="index.html" class="nav-item active">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="nav-svg">
+            <path d="M12 4 4 10.2V20h5.5v-5h5V20H20v-9.8L12 4Z"></path>
+          </svg>
+        </span>
+        <span>Home</span>
+      </a>
+      <a href="#nearby-workers" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="nav-svg">
+            <path d="M12 2.5a7 7 0 0 1 7 7c0 5.1-7 12-7 12s-7-6.9-7-12a7 7 0 0 1 7-7Zm0 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"></path>
+          </svg>
+        </span>
+        <span>Discover</span>
+      </a>
+      <a href="worker-details.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="nav-svg">
+            <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Zm0 2v.4l8 5.3 8-5.3V8H4Zm16 8V10.8l-7.4 4.9a1 1 0 0 1-1.1 0L4 10.8V16h16Z"></path>
+          </svg>
+        </span>
+        <span>Chat</span>
+      </a>
+      <a href="worker-dashboard.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="nav-svg">
+            <path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm2 3v2h10V7H7Zm0 4v2h10v-2H7Zm0 4v2h6v-2H7Z"></path>
+          </svg>
+        </span>
+        <span>Bookings</span>
+      </a>
+      <a href="login.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="nav-svg">
+            <path d="M12 12a4.5 4.5 0 1 0-4.5-4.5A4.5 4.5 0 0 0 12 12Zm0 2c4 0 7.5 2 8.5 5H3.5c1-3 4.5-5 8.5-5Z"></path>
+          </svg>
+        </span>
+        <span>Account</span>
+      </a>
+    </nav>
+
+    <section class="prototype-screen nearby-screen" id="nearby-workers" aria-label="Nearby workers map screen">
+      <header class="screen-header">
+        <div>
+          <p class="label">Second Screen</p>
+          <h3>Nearby Workers</h3>
+        </div>
+        <button class="icon-button" aria-label="Map options">
+          <span class="screen-dot-icon"></span>
+        </button>
+      </header>
+
+      <div class="map-panel">
+        <div class="map-grid" aria-hidden="true"></div>
+        <div class="radius-ring radius-outer" aria-hidden="true"></div>
+        <div class="radius-ring radius-inner" aria-hidden="true"></div>
+        <div class="user-pin" aria-hidden="true"></div>
+
+        <button class="worker-pin pin-one" type="button" data-go-page="worker-details.html" aria-label="Open Arjun Kumar details">
+          <span class="pin-avatar avatar-orange" aria-hidden="true">👨‍🔧</span>
+          <span class="pin-price">$28</span>
+        </button>
+        <button class="worker-pin pin-two" type="button" data-go-page="worker-details.html" aria-label="Open Priya Sharma details">
+          <span class="pin-avatar avatar-blue-small" aria-hidden="true">👩‍🔧</span>
+          <span class="pin-price">$34</span>
+        </button>
+        <button class="worker-pin pin-three" type="button" data-go-page="worker-details.html" aria-label="Open Rahul Verma details">
+          <span class="pin-avatar avatar-teal" aria-hidden="true">🧑‍🔧</span>
+          <span class="pin-price">$30</span>
+        </button>
+      </div>
+
+      <section class="section-header section-spaced">
+        <div>
+          <p class="label">Within 5 Miles</p>
+          <h3>Available Workers</h3>
+        </div>
+        <a href="worker-details.html" class="section-link">View all</a>
+      </section>
+
+      <section class="nearby-worker-list">
+        <article class="nearby-worker-card">
+          <div class="nearby-avatar nearby-avatar-orange" aria-hidden="true">👨</div>
+          <div class="nearby-worker-info">
+            <h4>Arjun Kumar</h4>
+            <p>Appliance technician</p>
+            <div class="nearby-meta">
+              <span>★ 4.8</span>
+              <span>1.2 mi away</span>
+            </div>
+          </div>
+          <div class="nearby-price-block">
+            <strong>$28/hr</strong>
+            <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+          </div>
+        </article>
+
+        <article class="nearby-worker-card">
+          <div class="nearby-avatar nearby-avatar-blue" aria-hidden="true">👩</div>
+          <div class="nearby-worker-info">
+            <h4>Priya Sharma</h4>
+            <p>Licensed electrician</p>
+            <div class="nearby-meta">
+              <span>★ 4.9</span>
+              <span>2.4 mi away</span>
+            </div>
+          </div>
+          <div class="nearby-price-block">
+            <strong>$34/hr</strong>
+            <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+          </div>
+        </article>
+
+        <article class="nearby-worker-card">
+          <div class="nearby-avatar nearby-avatar-green" aria-hidden="true">🧔</div>
+          <div class="nearby-worker-info">
+            <h4>Rahul Verma</h4>
+            <p>Pipe and leak specialist</p>
+            <div class="nearby-meta">
+              <span>★ 4.7</span>
+              <span>3.1 mi away</span>
+            </div>
+          </div>
+          <div class="nearby-price-block">
+            <strong>$30/hr</strong>
+            <button class="mini-book" type="button" data-go-page="worker-details.html">Book</button>
+          </div>
+        </article>
+      </section>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
