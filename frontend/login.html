@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkNet Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-card">
+      <div class="login-brand">
+        <div class="login-logo" aria-hidden="true">
+          <span class="logo-core"></span>
+          <span class="logo-orbit orbit-a"></span>
+          <span class="logo-orbit orbit-b"></span>
+          <span class="logo-spark spark-one"></span>
+          <span class="logo-spark spark-two"></span>
+        </div>
+        <p class="label">Welcome Back</p>
+        <h1>WorkNet</h1>
+        <p class="brand-tag">Verified workers. Faster bookings. Cleaner service experience.</p>
+        <p class="login-subtitle">Sign in to book trusted workers or manage service requests on the go.</p>
+      </div>
+
+      <section class="role-switch" aria-label="Choose account type">
+        <button class="role-option active" type="button" data-role="customer">Login as Customer</button>
+        <button class="role-option" type="button" data-role="worker">Login as Worker</button>
+      </section>
+
+      <form class="login-form" id="login-form">
+        <label class="auth-field">
+          <span>Email Address</span>
+          <input id="login-email" type="email" placeholder="name@example.com" required>
+        </label>
+
+        <label class="auth-field">
+          <span>Password</span>
+          <input id="login-password" type="password" placeholder="Enter your password" required>
+        </label>
+
+        <button class="auth-primary" type="submit">Login to WorkNet</button>
+      </form>
+
+      <p class="auth-status" id="auth-status" aria-live="polite"></p>
+
+      <div class="auth-divider">
+        <span>or continue with</span>
+      </div>
+
+      <div class="social-actions">
+        <button class="social-button" type="button" data-social-provider="google">
+          <span class="social-icon google-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M21.8 12.2c0-.7-.1-1.3-.2-1.9H12v3.6h5.5a4.7 4.7 0 0 1-2 3.1v2.6h3.2c1.9-1.8 3.1-4.4 3.1-7.4Z" fill="#4285F4"></path>
+              <path d="M12 22c2.7 0 5-0.9 6.7-2.4l-3.2-2.6c-.9.6-2 .9-3.5.9-2.7 0-4.9-1.8-5.7-4.2H3v2.7A10 10 0 0 0 12 22Z" fill="#34A853"></path>
+              <path d="M6.3 13.7A6 6 0 0 1 6 12c0-.6.1-1.2.3-1.7V7.6H3A10 10 0 0 0 2 12c0 1.6.4 3.2 1 4.4l3.3-2.7Z" fill="#FBBC04"></path>
+              <path d="M12 6.1c1.5 0 2.8.5 3.8 1.4l2.9-2.9A10 10 0 0 0 3 7.6l3.3 2.7C7.1 7.9 9.3 6.1 12 6.1Z" fill="#EA4335"></path>
+            </svg>
+          </span>
+          <span>Continue with Google</span>
+        </button>
+
+        <button class="social-button apple-button" type="button" data-social-provider="apple">
+          <span class="social-icon apple-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M15.2 3.2c0 1-.4 2-1.1 2.7-.8.8-1.8 1.2-2.8 1.1-.1-1 .3-2.1 1.1-2.8.7-.7 1.9-1.2 2.8-1ZM18.5 18.2c-.5 1.1-.8 1.6-1.4 2.5-.8 1.2-1.8 2.7-3.1 2.7-1.1 0-1.4-.7-2.9-.7-1.5 0-1.8.7-2.9.7-1.3 0-2.2-1.3-3-2.5-2.1-3.1-2.3-6.6-1-8.6.9-1.4 2.3-2.3 3.7-2.3 1.4 0 2.3.7 3.4.7 1 0 1.7-.7 3.4-.7 1.2 0 2.5.7 3.4 1.8-3 1.6-2.5 5.8.4 6.4Z"></path>
+            </svg>
+          </span>
+          <span>Continue with Apple</span>
+        </button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
